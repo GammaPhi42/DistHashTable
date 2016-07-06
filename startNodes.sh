@@ -1,6 +1,9 @@
 #!/bin/bash
 
-for i in [1,20]:
+#Starting Registry
+gnome-terminal -x java cs455.overlay.node.Registry 13337
+
+for i in {1..8}
 do
-	java cs455.overlay.node.MessagingNode 10.0.0.12 1666 &
+	gnome-terminal -x java cs455.overlay.node.MessagingNode fedorabox 13337
 done
